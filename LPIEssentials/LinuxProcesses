@@ -1,0 +1,25 @@
+PROCESSES
+
+What a process is? A set of instruction loaded into memory
+PID: process ID
+PID 1: init / systemd (new) (is the "parent" process of all)
+
+
+/PROC
+where kernel storage info about current processes
+
+
+
+COMMANDS:
+ps (to see processes) alone, will show process for that current terminal
+ps -u username will show process for that partic. user
+ps -e show all the process
+ps -eH show all process, and its hierarchy
+ps -f full format listing showing all arguments the command is using
+top shows process online
+
+KILL process:
+using TOP: press k and type PID
+use kill -9 PID
+
+

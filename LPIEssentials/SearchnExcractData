@@ -1,0 +1,171 @@
+LPIC101
+
+LESSON: VIEWING TEXT
+
+LESS
+
+Shows content of file, search for keywords, able to scroll through content
+with arrows
+
+syntax:
+
+less <filename>
+
+/ for search
+
+##############################################################################
+
+HEAD
+
+Show first 10 lines of a file
+
+syntax:
+
+head <filename>
+
+options:
+
+head -n <linenumber>
+
+#############################################################################
+
+TAIL
+
+Show last 10 lines of a file
+
+syntax:
+
+tail <filename>
+
+options:
+
+tail -n <linenumber>
+
+
+Tip: use "tail" to follow a file as it get updated
+
+need to be root
+
+syntax:
+
+tail -f <file/dirname>
+
+
+-------------------------------------------------------------------------------
+
+LESSON: Analyzing Text
+
+Input/Output redirection
+
+standard output: bucket where all output goes
+"stdout"
+
+(When the ouput is printed in screen, informs that is inside the bucket)
+
+SYNTAX:
+
+(redirect with < and >)
+
+head -n 1 <filename> > <filename>
+
+>> send output to file but appending that output to a already created file without wiping the data inside of it in the process
+
+###############################################################################
+
+CUT
+
+Remove text based in a delimiter character
+
+SYNTAX:
+
+cut -d"<character>" -f <numberofspace> <Filename>
+
+ex: cut -d" " -f 6- file.txt
+This will do: cut the "file.txt" separating each field with an space,
+from field 6 to the end.
+
+###############################################################################
+
+SORT
+
+sort content alphabetically or numerically 
+
+SYNTAX:
+
+sort <filename>
+
+###############################################################################
+
+ECHO to add blank lines
+
+SYNTAX:
+
+echo >> <filename>  = to add blank line at bottom
+echo " Lines Words Document " >> <filename>  = to add blank line at head
+
+###############################################################################
+
+WC (Word count)
+
+Print number of lines, words and bytecounts
+
+SYNTAX
+
+wc -lw <filename>
+This will count -l (lines) -w (words)
+
+Can be redirected to a file
+
+-------------------------------------------------------------------------------
+
+LESSON: PIPEs AND REGULAR EXPRESSIONS
+
+GREP
+
+SYNTAX:
+
+grep <pattern> <filename>
+
+ex: grep republic <filename>
+Will show the times that word "republic" is in that file
+
+since it is case sensitive, to avoid it use
+
+grep -i <parameter> <filename>
+
+###############################################################################
+
+PIPE
+
+The pipe will take the standard output from the 1st command and will change it
+to the standard input of the 2nd command
+
+SYNTAX
+
+grep -i <filename> | less
+Will show the content of the file
+
+###############################################################################
+
+REGULAR EXPRENSIONS
+
+Search patterns that use special character that help to find the sarch parameters
+
+SYNTAX
+grep -i '^republic' <filename>
+This will show the lines that begin with the word republic
+
+grep -i 'republic$'<filename>
+Will show the lines that finish with the word republic
+
+grep '^[xqs]'
+will show lines starting with that letters
+if add ^inside brackets will avoid lines starting with that words
+
+
+
+
+
+
+
+
