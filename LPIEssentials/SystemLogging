@@ -1,0 +1,13 @@
+SYSTEM LOGGING
+
+/var/log
+
+boot.log : boot information
+messages: what is going on in the system ideal to start troubleshooting an issue
+secure: defense report (privilegies elevated, user account loging/fail to login
+** the ones who has date at name, are ones that changes with the day
+syslog/syslogd 
+kernel ring buffer: only reside in memory, changes constantly to see it: dmesg
+dmesg:
+Idea to pipe output about we will need to check since it is too much information
+

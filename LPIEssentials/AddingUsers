@@ -1,0 +1,36 @@
+Adding users:
+
+Commands>
+
+Create groups: groupadd groupname
+Create automatically a gid
+	-g to set up GID
+/etc/group: groups information
+
+Create user: useradd -G GID > this will add user to that group 
+as secondary group
+
+	useradd -m to create the user's home
+	useradd -c "User full name" userloginname
+
+to check: id username > will display information 
+
+Useradd pulls info from /etc/default/useradd
+	- home dir
+	- default shell
+	- skel
+
+/etc/skel
+Files in this directory are copied autom into new user's home dir.
+Also, default shell and defaul browser account
+
+Password:
+
+Command: passwd username
+Change user's password
+
+file: /etc/passwd
+	where password is encrypted: /etc/shadow
+		username:encryptedpasswd:how many days since last change:expiredate:maximum passwd age:previous to passwd change notif
+
+

@@ -1,0 +1,15 @@
+HARDWARE
+
+CPU info: /proc/cpuinfo
+RAM info: free (command) show RAM status
+	  free -m(megabytes) -g(gigabytes)
+MoBoard info: dmidecode (command) Mobo info, processor, ramtype, bios
+POWERSuppliers
+HD: /dev (contain info as device)
+    names for disk will be "/dev/sda" /dev/sdb" and so goes one
+Partitions also, are named as "sdaX" like "/dev/sda1"
+Commands:
+lsblk : see all the hard drives in system
+df: to see space 
+    -h: human readable information flag
+OPTICAL DRIVES.

@@ -1,0 +1,46 @@
+LPIC Essentials - Turning commands to scripts
+
+LESSON: NANO
+
+Notable comments:
+
+Start already in INSERT mode.
+
+Ctrl+G : manual/available
+
+CTRL+W: search in the file. Allows to type the word at bottom
+
+Copy: highlight the line to copy, press ALT+6 to paste CTRL+u
+
+Spellcheck: (needs spelllibraries) ctrl+t 
+
+search and replace: ctrl+\ in the text that we want to replace and type
+the new word
+
+Ctrl+x: save 
+
+------------------------------------------------------------------------------
+
+LESSON: VI/VIM
+
+Notable comments:
+
+Start in COMMAND mode.
+
+Change to inser: I
+Change to command: ESC
+Move inside the file/text: h=left k=up l=right g=down
+Visual Mode: V. y=yank (copy) p=put(paste) u=undo
+Save: W also can add filename bisde W
+Shift +g= go to the bottom/last line in doc
+gg= top of the doc/first line
+shift+a= append text to the end of the line
+Delete word: dw to delete the specific word
+wq= write and quit
+q!: quite without override
+
+vimtutor app: tutorial from VI/VIM
+
+-------------------------------------------------------------------------------
+
+

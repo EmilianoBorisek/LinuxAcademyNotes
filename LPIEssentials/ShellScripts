@@ -1,0 +1,101 @@
+LPIC ESSENTIALS - SHELL SCRIPTING
+
+LESSON: SHELL SCRIPTING PART1
+
+Notes:
+
+.sh extension: identifies script as it.
+Are created with text editors
+
+Parts:
+#!/bin/bash: shebang, inform to bash what command interpreter use
+# Comment: describes the purpose of the script. Allways begin with "#"
+Environment $vars just need to be inserted with $.
+Executable permissions should be run in the .sh file to run
+
+To execute it:
+
+absolute path where it's stored
+relative: using ./ if we are in the current dir where .sh is
+$PATH: will show where system will execute scripts if we add the script there
+the pc will understand that should be executed.
+
+Conditional statement:
+Test the value of something, and depending on the output decide which action to take
+
+if [test a condition]; then [results]
+* the "then" could be in the same line or in different lines
+
+eg: if ["1" == "1" ] 
+> then
+> echo "Yep, they're the same"
+> fi (finish "IF" statement)
+
+THIS should echo if the numbers are equal
+
+##############################################################################
+
+IF - ELSE statement
+
+
+eg: current working directory is same from $HOME
+if [ "$PWD" == (this compares) $HOME" ]
+> then
+      echo "You are home."
+else
+    echo "You are in $PWD"
+fi
+
+this should print: 1) You are at home if $PWD=$HOME
+		   2) You are $PWD
+
+-------------------------------------------------------------------------------
+
+LESSON: SHELL SCRIPTING PART2
+
+Notes:
+
+for loops: perform the same action in each item in a set of values that we define
+eg:
+
+for i in john mary jack pedro (variable i, represent each name)
+(i will be different in each case, using each of the names)
+
+for i in john mary jack pedro
+do
+echo "$i"
+done
+THIS WILL PRINT ALL THE NAMES AVAILABlE FOR I
+
+Range of numbers:
+for i in {1..10}
+
+do
+echo "$i"
+done
+Will print all the numbers
+
+############################################
+Set up local variable: pathnames, etc is good to use vars if we need to change
+the location of the script
+
+For this add at the top:
+VARNAME=VALUENEEDED
+eg: DOCUMENTS="/home/documents"
+
+using it: 
+for doc in "$DOCUMENTS"/*.txt
+this will show any *.txt in DOCUMENTS 
+we can add "echo" to show in the screen
+
+##########################################################
+
+SKIP Portions of the script:
+we can create vars like: VALUE=$1 reffering to the first action after the script execution.
+For example: SHOWDAY=$1
+	     this will take action, for eg, using if based on the first command user use with the script.
+
+
+do to DO something
+done to finish that
+
